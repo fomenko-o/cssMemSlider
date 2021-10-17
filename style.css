@@ -1,3 +1,7 @@
+:root{
+   --transition: 0.5s ease-out;
+}
+
 * {
    box-sizing: border-box;
    margin: 0;
@@ -31,6 +35,7 @@ main {
    height: 40rem;
    background-size: cover;
    background-repeat: no-repeat;
+   transition: var(--transition);
 }
 
 .img-slide:nth-of-type(1){
@@ -48,8 +53,6 @@ main {
 .img-slide:nth-of-type(5){
    background-image: url('img/meme5.jpg');
 }
-
-
 
 .wrapper {
    background-color: brown;
@@ -75,7 +78,7 @@ main {
    width: 20rem;
    height: 3rem;
    background-color: cadetblue;
-   border: 1px solid black;
+   transition: var(--transition);
 }
 
 .slider-pagination{
@@ -91,16 +94,19 @@ main {
    height: 2.5rem;
    background-color: rgb(163, 163, 230);
    border: 1px solid black;
+   cursor: pointer;
 }
 
 .bullet{
    width: 1rem;
    height: 1rem ;
    background-color: rgb(77, 77, 172);
+   transition: var(--transition);
 }
 
 .bullet-container:hover .bullet{
    background-color: #ffffff;
+   transition: var(--transition);
 }
 
 input {
