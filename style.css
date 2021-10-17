@@ -31,7 +31,7 @@ h1 {
 
 .img-slider-outer {
   width: var(--size);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .img-slider-inner {
@@ -73,7 +73,7 @@ h1 {
 
 .text-slider-outer {
   width: calc(var(--size) / 1.5);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .text-slider-inner {
