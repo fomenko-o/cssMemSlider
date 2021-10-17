@@ -1,22 +1,30 @@
 :root{
-   --transition: 0.5s ease-out;
+   --transition: 0.2s ease-out;
+   --color: #ffbb00;
 }
 
 * {
+   font-family: 'Noto Sans Mono', monospace;
    box-sizing: border-box;
    margin: 0;
 }
 
 main {
+   height: 100vh;
    display: flex;
    justify-content: center;
+   background-color: #0b1317;
+}
+
+h1 {
+   font-size:3rem;
+   margin: 1rem 0;
+   color: var(--color);
 }
 
 .slider {
-   background-color: #eee;
    display: flex;
    flex-direction: column;
-   align-items: center;
    justify-content: center;
 }
 
@@ -55,7 +63,6 @@ main {
 }
 
 .wrapper {
-   background-color: brown;
    min-height: 5rem;
    width: 40rem;
    display: flex;
@@ -69,7 +76,6 @@ main {
 }
 
 .text-slider-inner {
-   background-color: rgb(31, 87, 88);
    display: flex;
    width: fit-content;
 }
@@ -77,12 +83,14 @@ main {
 .text-slide {
    width: 20rem;
    height: 3rem;
-   background-color: cadetblue;
+   padding-left: 1rem;
+   display: flex;
+   align-items: center;
    transition: var(--transition);
+   color: var(--color);
 }
 
 .slider-pagination{
-   background-color: rgb(93, 100, 110);
    display: flex;
 }
 
@@ -90,23 +98,26 @@ main {
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 2.5rem;
-   height: 2.5rem;
-   background-color: rgb(163, 163, 230);
-   border: 1px solid black;
+   width: 3rem;
+   height: 3rem;
    cursor: pointer;
 }
 
 .bullet{
    width: 1rem;
    height: 1rem ;
-   background-color: rgb(77, 77, 172);
+   background-color: #fff;
+   border-radius: 50%;
    transition: var(--transition);
 }
 
 .bullet-container:hover .bullet{
-   background-color: #ffffff;
+   background-color: #e26837;
    transition: var(--transition);
+}
+
+.bullet-container:active .bullet{
+   background-color: #dd1e1e;
 }
 
 input {
@@ -114,23 +125,23 @@ input {
 }
 
 #bullet-1:checked ~ .wrapper .bullet-container:nth-of-type(1) .bullet {
-   background-color: white;
+   background-color: var(--color);
 }
 
 #bullet-2:checked ~ .wrapper .bullet-container:nth-of-type(2) .bullet {
-   background-color: white;
+   background-color: var(--color);
 }
 
 #bullet-3:checked ~ .wrapper .bullet-container:nth-of-type(3) .bullet {
-   background-color: white;
+   background-color: var(--color);
 }
 
 #bullet-4:checked ~ .wrapper .bullet-container:nth-of-type(4) .bullet {
-   background-color: white;
+   background-color: var(--color);
 }
 
 #bullet-5:checked ~ .wrapper .bullet-container:nth-of-type(5) .bullet {
-   background-color: white;
+   background-color: var(--color);
 }
 
 #bullet-1:checked ~ .img-slider-outer .img-slide:first-of-type, #bullet-1:checked ~ .wrapper .text-slide:first-of-type {
