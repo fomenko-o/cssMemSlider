@@ -3,31 +3,52 @@
    margin: 0;
 }
 
-.slider {
-   background-color: #eee;
-   /* overflow-x: scroll;
-   width: 30rem; */
+main {
+   display: flex;
+   justify-content: center;
 }
 
-.img-slider {
+.slider {
+   background-color: #eee;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.img-slider-outer{
+   width: 40rem;
+   overflow-x: hidden;
+}
+
+.img-slider-inner {
    display: flex;
    width: fit-content;
 }
 
 .img-slide{
-   width: 30rem;
+   width: 40rem;
    height: 20rem;
    background-color: darksalmon;
    border: 1px solid black;
 }
 
+
 .wrapper {
    background-color: brown;
+   min-height: 5rem;
+   width: 40rem;
    display: flex;
+   align-items: center;
    justify-content: space-between;
 }
 
-.text-slider {
+.text-slider-outer {
+   width: 20rem;
+   overflow-x: hidden;
+}
+
+.text-slider-inner {
    background-color: rgb(31, 87, 88);
    display: flex;
    width: fit-content;
@@ -63,4 +84,48 @@
 
 .bullet-container:hover .bullet{
    background-color: #ffffff;
+}
+
+input {
+   display: none;
+}
+
+#bullet-1:checked ~ .wrapper .bullet-container:nth-of-type(1) .bullet {
+   background-color: white;
+}
+
+#bullet-2:checked ~ .wrapper .bullet-container:nth-of-type(2) .bullet {
+   background-color: white;
+}
+
+#bullet-3:checked ~ .wrapper .bullet-container:nth-of-type(3) .bullet {
+   background-color: white;
+}
+
+#bullet-4:checked ~ .wrapper .bullet-container:nth-of-type(4) .bullet {
+   background-color: white;
+}
+
+#bullet-5:checked ~ .wrapper .bullet-container:nth-of-type(5) .bullet {
+   background-color: white;
+}
+
+#bullet-1:checked ~ .img-slider-outer .img-slide:first-of-type, #bullet-1:checked ~ .wrapper .text-slide:first-of-type {
+   margin-left: 0;
+}
+
+#bullet-2:checked ~ .img-slider-outer .img-slide:first-of-type, #bullet-2:checked ~ .wrapper .text-slide:first-of-type {
+   margin-left: -20%;
+}
+
+#bullet-3:checked ~ .img-slider-outer .img-slide:first-of-type, #bullet-3:checked ~ .wrapper .text-slide:first-of-type {
+   margin-left: -40%;
+}
+
+#bullet-4:checked ~ .img-slider-outer .img-slide:first-of-type, #bullet-4:checked ~ .wrapper .text-slide:first-of-type {
+   margin-left: -60%;
+}
+
+#bullet-5:checked ~ .img-slider-outer .img-slide:first-of-type, #bullet-5:checked ~ .wrapper .text-slide:first-of-type {
+   margin-left: -80%;
 }
